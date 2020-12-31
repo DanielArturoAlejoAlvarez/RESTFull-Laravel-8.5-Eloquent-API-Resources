@@ -40,7 +40,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
 
-        return new PostResource($post);
+        return response()->json(new PostResource($post), 200);
         
     }
 
