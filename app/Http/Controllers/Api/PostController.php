@@ -36,7 +36,7 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        
+
         $post = $this->post->create($request->all());
         return response()->json(new PostResource($post), 201);
 
@@ -64,7 +64,8 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, Post $post)
     {
-        //
+        $post->update($request->all());
+        return response()->json(new PostResource($post));
     }
 
     /**
