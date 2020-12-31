@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>API</title>
+    <title>API Resources</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
