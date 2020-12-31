@@ -14,6 +14,14 @@ class PostController extends Controller
 
     protected $post;
 
+    /**HTTP Status
+     * 1XX Info
+     * 2XX Respose Successfully
+     * 3XX Redirection
+     * 4XX Error Client
+     * 5XX Error Server
+     */
+
     public function __construct(Post $post)
     {
         $this->post = $post;
@@ -79,6 +87,9 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
+        /**
+         * VerifyCsrfToken apply except api/*
+         */
         return response()->json(null, 204);
     }
 }
