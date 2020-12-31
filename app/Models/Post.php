@@ -9,7 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $hidden = ['title','body'];
+    /*protected $hidden = ['title','body'];
     protected $appends = ['post_name','post_excerpt'];
 
     public function getPostNameAttribute() {
@@ -20,5 +20,5 @@ class Post extends Model
         return strtoupper(
             substr($this->body,0,100) . '...'
         );
-    }
+    }*/
 }
