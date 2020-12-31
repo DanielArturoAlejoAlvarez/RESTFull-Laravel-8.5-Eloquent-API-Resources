@@ -25,7 +25,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        
+        return response()->json(
+            new PostCollection(
+                $this->post->orderBy('id', 'DESC')->get()
+            )
+        );
     }
 
     /**
