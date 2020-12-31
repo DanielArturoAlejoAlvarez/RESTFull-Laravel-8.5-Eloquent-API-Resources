@@ -9,6 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title','body'];
+
     /*protected $hidden = ['title','body'];
     protected $appends = ['post_name','post_excerpt'];
 
