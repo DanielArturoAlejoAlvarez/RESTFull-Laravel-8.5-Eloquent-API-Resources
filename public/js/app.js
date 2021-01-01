@@ -1920,12 +1920,14 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.getPosts();
   },
-  methods: function methods() {
-    var _this = this;
+  methods: {
+    getPosts: function getPosts() {
+      var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/posts').then(function (res) {
-      _this.posts = res.data;
-    });
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/posts').then(function (res) {
+        _this.posts = res.data;
+      });
+    }
   }
 });
 

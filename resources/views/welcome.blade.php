@@ -14,7 +14,24 @@
                         </div>
                     @endif
 
-                    <post-component></post-component>
+                    <post-component inline-template>
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>POSTS</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="post in posts">
+                                    <td v-text="post.id"></td>
+                                    <td v-text="post.post_name"></td>
+                                    <td v-text="post.published_at"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </post-component>
                 </div>
             </div>
         </div>

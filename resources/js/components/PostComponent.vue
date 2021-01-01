@@ -10,11 +10,14 @@
        mounted() {
            this.getPosts()
        },
-       methods: function() {
-           axios.get('api/posts')
-            .then(res=>{
-                this.posts = res.data
-            })
+       methods: {
+           getPosts: function() {
+            axios.get('api/posts')
+                .then(res=>{
+                    this.posts = res.data
+                })
+            }
        }
+       
     }
 </script>
