@@ -1,13 +1,20 @@
-<template>
-    <div class="container">
-        Hello
-    </div>
-</template>
-
 <script>
+    import axios from 'axios';
+
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+       data() {
+           return {
+               posts: null
+           }
+       },
+       mounted() {
+           this.getPosts()
+       },
+       methods: function() {
+           axios.get('api/posts')
+            .then(res=>{
+                this.posts = res.data
+            })
+       }
     }
 </script>
