@@ -15,9 +15,7 @@ use App\Http\Controllers\Api\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('welcome');
 
 Route::group(['prefix' => 'api'], function () {
     Route::apiResource('posts', PostController::class);
