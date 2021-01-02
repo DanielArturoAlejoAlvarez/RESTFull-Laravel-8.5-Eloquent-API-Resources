@@ -254,6 +254,15 @@ public function run()
 ...
 ```
 
+### HTTP Resources
+
+```html
+$ http://127.0.0.1:8000/posts (frontend/backend[auth])
+
+$ http://127.0.0.1:8000/api/posts (API)
+
+```
+
 
 ## Contributing
 
