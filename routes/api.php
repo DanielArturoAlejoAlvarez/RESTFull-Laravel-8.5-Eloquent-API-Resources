@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('posts', Api\PostController::class)->names([
+Route::apiResource('posts', App\Http\Controllers\Api\PostController::class)->names([
   'index'   =>  'api.posts.index',
-  'store'   =>  'api.posts.store',
-  'show'    =>  'api.posts.show',
-  'update'  =>  'api.posts.update',
-  'destroy' =>  'api.posts.destroy',
-]);
+  //'store'   =>  'api.posts.store',
+  //'show'    =>  'api.posts.show',
+  //'update'  =>  'api.posts.update',
+  //'destroy' =>  'api.posts.destroy',
+])->only('index');

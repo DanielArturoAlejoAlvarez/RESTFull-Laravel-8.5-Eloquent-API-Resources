@@ -18,12 +18,11 @@ use App\Http\Controllers\Api\PostController;
 Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('welcome');
 
 Route::group(['prefix' => 'api'], function () {
-    Route::apiResource('posts', PostController::class);
+    //Route::apiResource('posts', PostController::class);
 });
 
-
-Auth::routes();
-
-Route::middleware('auth')->resource('posts', App\Http\Controllers\Backend\PostController::class);
+Route::middleware('auth')->resource('posts', App\Http\Controllers\Backend\PostController::class)->only('index');
 
 Route::get('/home', [App\Http\Controllers\Backend\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
