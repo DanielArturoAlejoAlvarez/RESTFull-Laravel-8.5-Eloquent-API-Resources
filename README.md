@@ -44,6 +44,34 @@ Follow the following steps and you're good to go! Important:
 
 ## Coding
 
+### Component
+
+```js
+...
+import axios from 'axios';
+
+    export default {
+       data() {
+           return {
+               posts: null
+           }
+       },
+       mounted() {
+           this.getPosts()
+       },
+       methods: {
+           getPosts: function() {
+            axios.get('api/posts')
+                .then(res=>{
+                    this.posts = res.data
+                })
+            }
+       }
+       
+    }
+...
+```
+
 ### Controllers
 
 ```php
