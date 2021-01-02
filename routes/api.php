@@ -14,3 +14,11 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::apiResource('posts', Api\PostController::class)->names([
+  'index'   =>  'api.posts.index',
+  'store'   =>  'api.posts.store',
+  'show'    =>  'api.posts.show',
+  'update'  =>  'api.posts.update',
+  'destroy' =>  'api.posts.destroy',
+]);

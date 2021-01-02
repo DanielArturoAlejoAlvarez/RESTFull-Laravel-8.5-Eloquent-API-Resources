@@ -24,4 +24,6 @@ Route::group(['prefix' => 'api'], function () {
 
 Auth::routes();
 
+Route::middleware('auth')->resource('posts', App\Http\Controllers\Backend\PostController::class);
+
 Route::get('/home', [App\Http\Controllers\Backend\HomeController::class, 'index'])->name('home');
